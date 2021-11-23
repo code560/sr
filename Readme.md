@@ -11,6 +11,6 @@ type normal.txt|sr <script>
 
 # SCRIPT
 
-s/<regular expression>/<replacement>  
+s/regular expression/replacement  
 
 
