@@ -11,8 +11,9 @@ import (
 )
 
 func makeFilter(script string) func(string) string {
-	scripts := regexp.MustCompile("/").Split(script, 4)
-	if scripts[0] == "s" {
+	delim := string([]rune(script)[1:2])
+	scripts := regexp.MustCompile(delim).Split(script, 4)
+	if len(scripts) >= 3 && scripts[0] == "s" {
 		r := regexp.MustCompile(scripts[1])
 		return func(in string) string {
 			return r.ReplaceAllString(in, scripts[2])

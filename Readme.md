@@ -13,4 +13,4 @@ type normal.txt|sr <script>
 
 s/regular expression/replacement  
 
-
+- escape: / -> !  
